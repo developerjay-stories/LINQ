@@ -1,0 +1,21 @@
+In the previous section, you have learned about LINQ Query Syntax. Here, you will learn about Method syntax.
+
+Method syntax (also known as fluent syntax) uses extension methods included in the Enumerable or Queryable static class, 
+similar to how you would call the extension method of any class.
+
+The compiler converts query syntax into method syntax at compile time.
+
+The following is a sample LINQ method syntax query that returns a collection of strings which contains a word "Tutorials".
+
+Example: LINQ Method Syntax in C#
+// string collection
+IList<string> stringList = new List<string>() { 
+    "C# Tutorials",
+    "VB.NET Tutorials",
+    "Learn C++",
+    "MVC Tutorials" ,
+    "Java" 
+};
+
+// LINQ Query Syntax
+var result = stringList.Where(s => s.Contains("Tutorials"));
