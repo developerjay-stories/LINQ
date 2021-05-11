@@ -1,0 +1,20 @@
+We can write LINQ queries for the classes that implement IEnumerable<T> or IQueryable<T> interface.
+The System.Linq namespace includes the following classes and interfaces require for LINQ queries.
+
+LINQ queries uses extension methods for classes that implement IEnumerable or IQueryable interface. 
+The Enumerable and Queryable are two static classes that contain extension methods to write LINQ queries.
+
+Enumerable
+
+The Enumerable class includes extension methods for the classes that implement IEnumerable<T> interface, for example all the built-in collection 
+classes implement IEnumerable<T> interface and so we can write LINQ queries to retrieve data from the built-in collections.
+
+The following figure shows the extension methods included in Enumerable class that can be used with the generic collections in C# or VB.Net.
+
+Queryable
+
+The Queryable class includes extension methods for classes that implement IQueryable<t> interface. The IQueryable<T> interface is used to provide querying capabilities against a specific data source where the type of the data is known. For example, Entity Framework api implements IQueryable<T> interface to support LINQ queries with underlaying databases such as MS SQL Server.
+
+Also, there are APIs available to access third party data; for example, LINQ to Amazon provides the ability to use LINQ with Amazon web services to search for books and other items. This can be achieved by implementing the IQueryable interface for Amazon.
+
+The following figure shows the extension methods available in the Queryable class can be used with various native or third party data providers.
