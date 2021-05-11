@@ -1,0 +1,6 @@
+C# 3.0(.NET 3.5) introduced the lambda expression along with LINQ. The lambda expression is a shorter way of representing anonymous method using some special syntax.
+
+For example, following anonymous method checks if student is teenager or not:
+
+Example: Anonymous Method in C#
+delegate(Student s) { return s.Age > 12 && s.Age < 20; };
