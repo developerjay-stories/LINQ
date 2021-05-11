@@ -1,0 +1,29 @@
+There are two basic ways to write a LINQ query to IEnumerable collection or IQueryable data sources.
+
+Query Syntax or Query Expression Syntax
+Method Syntax or Method Extension Syntax or Fluent
+
+LINQ Query Syntax:
+
+from <range variable> in <IEnumerable<T> or IQueryable<T> Collection>
+
+<Standard Query Operators> <lambda expression>
+
+<select or groupBy operator> <result formation>
+
+The LINQ query syntax starts with from keyword and ends with select keyword. The following is a sample LINQ query that returns a collection of strings which contains a word "Tutorials".
+
+Example: LINQ Query Syntax in C#
+// string collection
+IList<string> stringList = new List<string>() { 
+    "C# Tutorials",
+    "VB.NET Tutorials",
+    "Learn C++",
+    "MVC Tutorials" ,
+    "Java" 
+};
+
+// LINQ Query Syntax
+var result = from s in stringList
+            where s.Contains("Tutorials") 
+            select s;
